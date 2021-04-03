@@ -57,6 +57,7 @@ int main(void){
             }
         }
         if(wordisright == true){
+            std::cout << wordtoguess_visiblebyplayer << std::endl;
             std::cout << "You won! Do you want to play again? Y/N" << std::endl;
             std::cin >> userinput;
 
