@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-#define numberOfWords 13
+#define numberOfWords 30
 
 int wordnumber = numberOfWords;
 
@@ -20,6 +20,23 @@ std::string wordlist[numberOfWords]={
     "sun",
     "moon",
     "sand",
+    "mouse",
+    "computer",
+    "cake",
+    "egg",
+    "dog",
+    "cat",
+    "house",
+    "train",
+    "gold",
+    "iron",
+    "console",
+    "orange",
+    "dinosaur",
+    "guitar",
+    "children",
+    "snow",
+    "rain",
 };
 
 int wordslenght[numberOfWords]={
@@ -34,6 +51,23 @@ int wordslenght[numberOfWords]={
     4,
     6,
     3,
+    4,
+    4,
+    5,
+    8,
+    4,
+    3,
+    3,
+    3,
+    5,
+    5,
+    4,
+    4,
+    7,
+    6,
+    8,
+    6,
+    8,
     4,
     4,
 };
