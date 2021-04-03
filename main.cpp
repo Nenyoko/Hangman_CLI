@@ -21,6 +21,7 @@ int main(void){
     char userinput;
     int playerlife = 6;
     bool playerisright;
+    bool wordisright;
     int isplaying = 1;
     while (isplaying == 1){
         std::cout << wordtoguess_visiblebyplayer << std::endl;
@@ -41,11 +42,15 @@ int main(void){
             std::cout << "You lost.."  << std::endl;
             isplaying = 0;
         }
+        wordisright = true;
         for(int i=0; i!=wordtoguess_lenght; i++){
-            if(wordtoguess_visiblebyplayer[i] == wordtoguess[i]){
-                std::cout << "You won!" << std::endl;
-                isplaying = 0;
+            if(wordtoguess_visiblebyplayer[i] != wordtoguess[i]){
+                wordisright = false;
             }
+        }
+        if(wordisright == true){
+            std::cout << "You won!" << std::endl;
+            isplaying = 0;
         }
     }
 
