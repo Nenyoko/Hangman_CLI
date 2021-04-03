@@ -7,6 +7,7 @@
 #include "words.h"
 
 int main(void){
+    start:
     srand((unsigned int)time(0));
     int selectedword = rand() % wordnumber;
 
@@ -39,8 +40,15 @@ int main(void){
             std::cout << "Wrong letter, try again! Remaining life: " << playerlife << std::endl;
         }
         if(playerlife == 0){
-            std::cout << "You lost.."  << std::endl;
-            isplaying = 0;
+            std::cout << "You lost.. The word was " << wordtoguess << ". Do you want to play again? Y/N" << std::endl;
+            std::cin >> userinput;
+
+            if(userinput == 'y' || userinput == 'Y'){
+                goto start;
+            }
+            else{
+                isplaying = 0;
+            }
         }
         wordisright = true;
         for(int i=0; i!=wordtoguess_lenght; i++){
@@ -49,9 +57,15 @@ int main(void){
             }
         }
         if(wordisright == true){
-            std::cout << "You won!" << std::endl;
-            isplaying = 0;
+            std::cout << "You won! Do you want to play again? Y/N" << std::endl;
+            std::cin >> userinput;
+
+            if(userinput == 'y' || userinput == 'Y'){
+                goto start;
+            }
+            else{
+                isplaying = 0;
+            }
         }
     }
-
 }
