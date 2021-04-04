@@ -15,11 +15,11 @@ int main(void){
 
     //choose a world from the list and determine its length.
     std::string wordtoguess = wordlist[selectedword];
-    int wordtoguess_lenght = wordtoguess.length();
+    int wordtoguess_length = wordtoguess.length();
     
 
     std::string wordtoguess_visiblebyplayer = "          ";
-    for(int i=0; i!=wordtoguess_lenght; i++){
+    for(int i=0; i!=wordtoguess_length; i++){
         wordtoguess_visiblebyplayer[i] = '_';
     }
 
@@ -38,7 +38,7 @@ int main(void){
         std::cin >> userinput;
 
         //verify if the character from the user is in the word.
-        for(int i=0; i!=wordtoguess_lenght; i++){
+        for(int i=0; i!=wordtoguess_length; i++){
             //if yes, add the letter in "wordtoguess_visiblebyplayer"
             if(userinput == wordtoguess[i]){
                 wordtoguess_visiblebyplayer[i] = userinput;
@@ -65,7 +65,7 @@ int main(void){
 
         //verify if the player have guessed all the letters of the word
         wordisright = true;
-        for(int i=0; i!=wordtoguess_lenght; i++){
+        for(int i=0; i!=wordtoguess_length; i++){
             if(wordtoguess_visiblebyplayer[i] != wordtoguess[i]){
                 wordisright = false;
             }
